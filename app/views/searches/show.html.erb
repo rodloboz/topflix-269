@@ -1,0 +1,17 @@
+<%= render 'shared/search_box' %>
+<% if @movies.any? %>
+  <div class="featured-movie">
+    <%= render 'shared/featured', movie: @movies.first %>
+  </div>
+  <div class="movies">
+    <% @movies[1..-1].try(:each) do |movie| %>
+      <div class="movie-wrapper">
+        <%= render 'shared/card', movie: movie %>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="no-results">
+    <span>No results found</span>
+  </div>
+<% end %>

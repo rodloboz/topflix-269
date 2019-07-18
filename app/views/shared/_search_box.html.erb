@@ -1,0 +1,11 @@
+<div class="search-wrapper">
+  <%= form_for :search, url: search_path, method: :get do |f| %>
+    <div class="search-box" style="font-size: 24px;">
+      <%= f.text_field  :query,
+                        class: 'search-box__input',
+                        oninput: "this.setAttribute('value',this.value)"
+      %>
+      <i></i>
+    </div>
+  <% end %>
+</div>

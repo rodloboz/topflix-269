@@ -1,0 +1,27 @@
+<article class="featured-card" style="<%= movie.background_cover %>">
+  <div class="feature">
+    <div class="featured-nav">
+      <ul>
+        <li>Share</li>
+        <li class="facebook"><i class="fab fa-facebook"></i></li>
+        <li class="twitter"><i class="fab fa-twitter"></i></li>
+        <li><i class="fas fa-ellipsis-v"></i></li>
+      </ul>
+    </div>
+    <h2 class="featured-title"><%= movie.title %></h1>
+    <ul class="featured-meta">
+      <li><%= number_with_precision(movie.rating, precision: 1) %>/10</li>
+      <li><%= movie.category %></li>
+      <li><%= movie.genre %></li>
+      <li><%= movie.year %></li>
+    </ul>
+    <p class="featured-description"><%= movie.synopsis %></p>
+    <hr class="break" />
+    <div class="featured-bottom-info">
+      <a class="featured-watch video-btn" data-toggle="modal" data-src="<%= movie.video_src %>" data-target="#video-popup">
+        Watch Trailer
+      </a>
+      <!-- <a class="featured-watch">Watch Trailer</a> -->
+    </div>
+  </div>
+</article>

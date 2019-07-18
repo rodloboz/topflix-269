@@ -1,0 +1,26 @@
+<article class="movie-card" style="background-image: url(<%= movie.cover %>); background-color: <%= movie.theme_color %>">
+  <div class="movie-nav">
+    <ul>
+      <li>Share</li>
+      <li class="facebook"><i class="fab fa-facebook"></i></li>
+      <li class="twitter"><i class="fab fa-twitter"></i></li>
+      <li><i class="fas fa-ellipsis-v"></i></li>
+    </ul>
+  </div>
+  <div class="movie">
+    <h2 class="movie-title"><%= movie.title %></h1>
+    <ul class="movie-meta">
+      <li><%= number_with_precision(movie.rating, precision: 1) %>/10</li>
+      <li><%= movie.category %></li>
+      <li><%= movie.genre %></li>
+      <li><%= movie.year %></li>
+    </ul>
+    <p class="movie-description"><%= movie.synopsis %></p>
+    <hr class="break" />
+    <div class="movie-bottom-info">
+      <a class="movie-watch video-btn" data-toggle="modal" data-src="<%= movie.video_src %>" data-target="#video-popup">
+        Watch Trailer
+      </a>
+    </div>
+  </div>
+</article>

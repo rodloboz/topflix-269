@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render 'shared/search_box' %>
+<div class="featured-movie">
+  <%= render 'shared/featured', movie: @movies.first %>
+</div>
+<div class="movies">
+  <% @movies[1..-1].each do |movie| %>
+    <div class="movie-wrapper">
+      <%= render 'shared/card', movie: movie %>
+    </div>
+  <% end %>
+</div>

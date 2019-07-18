@@ -1,1 +1,37 @@
 // Specific CSS for your home-page
+
+.featured-movie {
+  width: 100%;
+  height: 70vh;
+}
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.movie-wrapper {
+  width: 50%;
+  height: 500px;
+}
+
+article {
+  width: 100% !important;
+}
+
+.no-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: rgb(242,72,32);
+  background: linear-gradient(144deg, rgba(242,72,32,1) 0%, rgba(242,72,32,1) 64%, rgba(224,102,73,1) 100%);
+
+  span {
+    color: $white;
+    font-size: 42px;
+  }
+}
